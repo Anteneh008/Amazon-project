@@ -1,0 +1,51 @@
+.footer {
+  background-color: #232f3e;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  width: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer__link li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.footer__link h3 {
+  font-size: 15px;
+  /* margin-left: 10px; */
+  margin-bottom: 10px;
+  align-items: center;
+  width: auto;
+}
+
+.footer__h3 {
+  margin-left: 40px;
+}
+
+/* Add styles for the expanded/collapsed state */
+.footer__link.collapsed ul {
+  display: none;
+}
+
+/* Style the active link */
+.footer__h3.active {
+  color: #ffffff;
+}

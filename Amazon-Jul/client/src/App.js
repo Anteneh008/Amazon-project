@@ -11,9 +11,12 @@ import Payment from "./Components/Payment/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Components/Orders/Orders";
+import DetailExplanation from "./Components/DetailExplanation/DetailExplanation";
+import SearchResults from "./SearchResults/SearchResults";
+
 
 const promise = loadStripe(
- "pk_test_51NQlGVB7j1gOJhJ5VVhMHXirbt9Gqo8XCSLUB30Gf2KHfo8erp84yS3Pi4smWXp4t0POtTUCUx1GxxNbaYDuVeOc00yry6il59"
+  "pk_test_51NQlGVB7j1gOJhJ5VVhMHXirbt9Gqo8XCSLUB30Gf2KHfo8erp84yS3Pi4smWXp4t0POtTUCUx1GxxNbaYDuVeOc00yry6il59"
 );
 
 function App() {
@@ -44,6 +47,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/detail/:id" element={<DetailExplanation />} />
+          <Route path="/search" element={<SearchResults />} />
+
           <Route
             path="/payment"
             element={

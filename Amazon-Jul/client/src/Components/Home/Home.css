@@ -1,16 +1,22 @@
 .home__image {
-    width: 100%;
-    z-index: -1;
-    margin-bottom: -150px;
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0)) ;
+  width: 100%;
+  z-index: -1;
+  @media (max-width: 768px) {
+    padding-bottom: 150px;
+  }
 }
 
 .home__row {
+  display: flex;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
     display: flex;
-    z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
+    flex-direction: column;
+    width: 96%;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
 }
