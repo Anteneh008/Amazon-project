@@ -12,7 +12,6 @@ app.all("/", (req, res) => {
   console.log("Just got a request!");
   res.send("Yo!");
 });
-app.listen(process.env.PORT || 3000);
 app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
   if (total > 0) {
